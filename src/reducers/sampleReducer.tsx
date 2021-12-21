@@ -1,11 +1,15 @@
 import { SAMPLE } from "../actions/actionTypes";
+import { AnyAction } from 'redux';
 
+interface CounterState {
+    count: number
+}
 
-const initialState = {
+const initialState: CounterState = {
     count: 0
 }
 
-const sampleReducer = (state=initialState, action: any) => {
+const sampleReducer = (state=initialState, action: AnyAction) => {
     
     switch(action.type) {
         case SAMPLE:
